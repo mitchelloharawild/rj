@@ -43,5 +43,5 @@ new_id <- function() {
 #' Find articles with a given status.
 #'
 filter_status <- function(articles, status) {
-    Filter(function(a) last_status(a)$status == status, articles)
+    Filter(function(a) last_status(a)$status %in% status, articles)
 }
