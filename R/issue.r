@@ -87,7 +87,7 @@ make_proof <- function(id, share_path = file.path("..", "share"), exec=FALSE) {
     issue$month <- switch(number, "1" = "June", "2" = "December")
 
     arts <- accepted_articles()
-    ready <- filter_status(arts, "online")
+    ready <- filter_status(arts, c("online", "proofed"))
     for (art in ready) {
         if (exec) {
           system(paste("git mv", art$path, file.path(dir, format(art$id))))
