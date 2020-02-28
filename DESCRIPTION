@@ -11,15 +11,16 @@ Imports:
     stringr,
     whisker,
     yaml,
-    gmailr,
+    gmailr (>= 1.0.0),
     pdftools,
     bibtex,
     jss,
-    tinytex
+    tinytex,
+    fs
 Suggests:
     testthat,
     ctv
 Depends:
     R (>= 3.2.0)
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.2.9000
+RoxygenNote: 7.0.2
