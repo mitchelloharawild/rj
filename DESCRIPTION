@@ -14,7 +14,8 @@ Imports:
     gmailr,
     pdftools,
     bibtex,
-    jss
+    jss,
+    tinytex
 Suggests:
     testthat,
     ctv

@@ -163,7 +163,7 @@ convert_bbl_tex <- function(tex_path) {
     message("Building ", tex_path)
     owd <- getwd()
     setwd(dirname(tex_path))
-    tools::texi2pdf("RJwrapper.tex", clean=FALSE, texinput=owd)
+    tinytex::pdflatex("RJwrapper.tex", clean=FALSE)
     setwd(owd)
     bbl_path <- file.path(dirname(tex_path), "RJwrapper.bbl")
     if (!file.exists(bbl_path)) stop("Can't find ", bbl_path)
@@ -251,7 +251,7 @@ build_issue <- function(id) {
         writeLines(out, issue_file)
     }
 
-    in_dir(dirname(issue_file), system(paste("pdflatex", basename(issue_file))))
+    in_dir(dirname(issue_file), tinytex::pdflatex(basename(issue_file)))
 }
 
 # checkProofed <- function(files) {
