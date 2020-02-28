@@ -54,11 +54,3 @@ importFrom(utils,adist)
 importFrom(whisker,whisker.render)
 importFrom(yaml,as.yaml,yaml.load_file)
 importFrom(pdftools, pdf_toc, pdf_text)
-
-# NM ftns; need to add more
-export(ackNM,rejectNM,acceptNM,getAll,conditAccNM)
-export(editPushNM,pushToGitHubNM)
-export(getMSnumByAut,getMSnumByTitle,getReviewStatus)
-export(getTitle,getAutInfo,getAutAddr,getEd,setEd)
-export(mailIt,sendLetter)
-export(checkNonASCII,delNonASCII)
